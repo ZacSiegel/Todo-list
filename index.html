@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="style.css">
+    <title>Zac Siegel Todo List</title>
+
+</head>
+
+<body>
+
+    <!-- Todo Form -->
+    <section class="form-container">
+        <h2>My To Do List</h2>
+        <form id="todo-form">
+            <div class="input-container">
+                <input type="text" class="todo-input" id="todo-input" placeholder="Title..." />
+                <button class="todo-button" type="submit" id="todo-btn">
+                    Add
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <div class="filter-container">
+        <!-- Filter Items -->
+        <div class="select">
+            <label for="todo-filter">Filter by:</label>
+            <select class="todo-filter" id="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed Items</option>
+                <option value="uncompleted">Todo Items</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <div>
+            <button id="oldest" data-order="ascendingByValue">Sort by oldest</button>
+            <button id="newest" data-order="descendingByValue">Sort by newest</button>
+        </div>
+    </div>
+
+    <div id="todo-container">
+        <h3>Todo Items</h3>
+
+        <!-- Todo items container -->
+        <div class="todo-container">
+            <ul id="todo-list">
+            </ul>
+        </div>
+    </div>
+
+    <!-- Container for completed todo items -->
+    <div id="completed-todos">
+        <div class="completed-todos-container">
+            <ul class="completed-todos-list" id="completed-todos-list">
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
